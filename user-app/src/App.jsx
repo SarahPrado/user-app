@@ -1,10 +1,16 @@
-import Home from "./pages/Home"
+// import React from 'react'
 
+import {Outlet} from "react-router-dom"
+import Navegator from "./components/Navegator"
+import Footer from "./components/Footer"
 function App() {
 
   return (
     <>
-    <Home />
+    <Navegator />
+    <div>APP</div>
+    <Outlet />
+    <Footer />
     </>
   )
 }

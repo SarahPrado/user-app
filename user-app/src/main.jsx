@@ -5,10 +5,13 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from "./pages/login";
+// import Login from "./pages/login";
 import App from "./App";
 import Usuario from "./pages/Usuario";
 import Contato from "./pages/Contato";
+import Login from "./pages/login";
+import Home from "./pages/Home";
+// import Home from "./pages/Home";
 
 
 /* const router = createBrowserRouter([
@@ -34,19 +37,25 @@ import Contato from "./pages/Contato";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <App />,
+    children: [
+      {
+        path: "/usuarios",
+        element: <Usuario />
+      },
+      {
+        path: "/contatos",
+        element: <Contato />
+      },
+      {
+        path: "/home",
+        element: <Home />
+      }
+    ]
   },
   {
-    path: "/home",
-    element: <App />
-  },
-  {
-    path: "/usuarios",
-    element: <Usuario />
-  },
-  {
-    path: "/contatos",
-    element: <Contato />
+    path: "/login",
+    element: <Login />
   }
 ]);
 
