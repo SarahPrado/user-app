@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App";
 import Usuario from "./pages/Usuario";
 import Contato from "./pages/Contato";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import Home from "./pages/Home";
 // import Home from "./pages/Home";
 
